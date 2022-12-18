@@ -6,4 +6,8 @@ export const Header = styled.header`
   justify-content: space-between;
   padding: 2rem 25%;
   background-color: white;
+
+  @media (max-width: 500px) {
+    padding: 2rem 10%;
+  }
 `;
