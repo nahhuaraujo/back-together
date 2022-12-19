@@ -1,10 +1,5 @@
 import styled from 'styled-components';
-import {
-  darkGreenColorValue,
-  lightGreenColorValue,
-  navLinkDefaultHover,
-  unstyledButton,
-} from '../../styles/global-styles.styled';
+import { lightGreenColorValue, navLinkDefaultHover, unstyledButton } from '../../styles/global-styles.styled';
 
 interface IMenuDrawerProps {
   isOpen: boolean;
