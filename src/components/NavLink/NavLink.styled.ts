@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { darkGreyColorValue } from '../../styles/global-styles.styled';
+import { navLinkDefaultHover } from '../../styles/global-styles.styled';
 
 interface INavLinkProps {
   onClick: () => void;
@@ -11,7 +11,5 @@ export const NavLink = styled(Link)<INavLinkProps>`
   text-decoration: none;
   transition: 100ms;
 
-  :hover {
-    background-color: ${darkGreyColorValue};
-  }
+  ${navLinkDefaultHover};
 `;

@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import { darkGreenColorValue, lightGreenColorValue, unstyledButton } from '../../styles/global-styles.styled';
+import {
+  darkGreenColorValue,
+  lightGreenColorValue,
+  navLinkDefaultHover,
+  unstyledButton,
+} from '../../styles/global-styles.styled';
 
 interface IMenuDrawerProps {
   isOpen: boolean;
@@ -26,6 +31,7 @@ export const MenuDrawer = styled.nav<IMenuDrawerProps>`
         padding: 1rem;
         cursor: pointer;
         ${unstyledButton};
+        ${navLinkDefaultHover};
       }
     }
 

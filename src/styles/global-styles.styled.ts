@@ -18,3 +18,9 @@ export const unstyledButton = css`
   background-color: transparent;
   border: none;
 `;
+
+export const navLinkDefaultHover = css`
+  :hover {
+    background-color: ${darkGreyColorValue};
+  }
+`;
