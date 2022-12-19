@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { defaultThinBorder } from '../../styles/global-styles.styled';
+import { darkGreenColorValue, defaultThinBorder } from '../../styles/global-styles.styled';
 
 export const PetCard = styled.section`
   display: flex;
@@ -13,6 +13,14 @@ export const PetCard = styled.section`
   width: 100%;
   height: 50%;
   display: block;
+  transition: 300ms;
+  z-index: 999;
+  cursor: pointer;
+
+  :hover {
+    box-shadow: 10px 10px ${darkGreenColorValue};
+    transform: scale(1.03);
+  }
 
   @media (max-width: 900px) {
     width: 100%;

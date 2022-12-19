@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightGreenColorValue, unstyledButton } from '../../styles/global-styles.styled';
+import { darkGreenColorValue, lightGreenColorValue, unstyledButton } from '../../styles/global-styles.styled';
 
 interface IMenuDrawerProps {
   isOpen: boolean;
@@ -42,14 +42,6 @@ export const MenuDrawer = styled.nav<IMenuDrawerProps>`
       text-align: inherit;
       cursor: pointer;
       ${unstyledButton};
-    }
-
-    a {
-      width: 100%;
-
-      :hover {
-        text-decoration: underline;
-      }
     }
   }
 `;

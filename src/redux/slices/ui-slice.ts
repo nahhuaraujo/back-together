@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getLocalStorage } from '../../utils/localStorage.util';
+import { getLocalStorage, setLocalStorage } from '../../utils/localStorage.util';
 
 const initialState = {
   filter: 'all',
@@ -11,13 +11,19 @@ export const uiSlice = createSlice({
   initialState: getLocalStorage('ui') ? getLocalStorage('ui') : initialState,
   reducers: {
     changeFilter: (state, action) => {
-      console.log('action', action);
+      const newState = { ...state, filter: action.payload };
+      setLocalStorage('ui', newState);
+      return newState;
     },
     openDrawer: state => {
-      return { ...state, isDrawerOpen: true };
+      const newState = { ...state, isDrawerOpen: true };
+      setLocalStorage('ui', newState);
+      return newState;
     },
     closeDrawer: state => {
-      return { ...state, isDrawerOpen: false };
+      const newState = { ...state, isDrawerOpen: false };
+      setLocalStorage('ui', newState);
+      return newState;
     },
   },
 });

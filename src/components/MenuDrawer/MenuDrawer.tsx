@@ -23,10 +23,19 @@ const MenuDrawer = () => {
             <NavLink to={'/login'}>Login</NavLink>
           </li>
           <li>
-            <NavLink to={'/found'}>Encontrados</NavLink>
+            <NavLink to={'/'} filter='all'>
+              Todos
+            </NavLink>
           </li>
           <li>
-            <NavLink to={'/lost'}>Perdidos</NavLink>
+            <NavLink to={'/'} filter='found'>
+              Encontrados
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={'/'} filter='lost'>
+              Perdidos
+            </NavLink>
           </li>
           <li>
             <NavLink to='/about-us'>Sobre nosotros</NavLink>

@@ -4,12 +4,14 @@ import * as S from './NavLink.styled';
 interface IProps {
   to: string;
   children: React.ReactNode;
+  filter?: string;
 }
-const NavLink = ({ to, children }: IProps) => {
-  const { closeDrawer } = useUIActions();
+const NavLink = ({ to, children, filter }: IProps) => {
+  const { closeDrawer, changeFilter } = useUIActions();
 
   const clickHandler = () => {
     closeDrawer();
+    changeFilter(filter);
   };
 
   return (

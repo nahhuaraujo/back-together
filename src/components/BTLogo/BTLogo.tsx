@@ -4,7 +4,9 @@ import { NavLink } from '../';
 const BTLogo = () => {
   return (
     <S.BTLogo>
-      <NavLink to='/'>Back Together</NavLink>
+      <NavLink to='/' filter='all'>
+        Back Together
+      </NavLink>
     </S.BTLogo>
   );
 };
