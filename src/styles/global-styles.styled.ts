@@ -24,3 +24,7 @@ export const navLinkDefaultHover = css`
     background-color: ${darkGreyColorValue};
   }
 `;
+
+export const defaultPadding = css`
+  padding: 0.4rem 1rem;
+`;

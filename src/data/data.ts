@@ -12,7 +12,6 @@ export const reports: IReport[] = [
     id: 'asjdhbasdhj',
     pet: {
       id: 'asdasddas',
-      name: 'Toto',
       species: 'Perro',
       breed: 'Pitbull',
       sex: 'male',
@@ -42,7 +41,6 @@ export const reports: IReport[] = [
     id: 'asjdhbasdhjddsads',
     pet: {
       id: 'asdjnlasdmlas',
-      name: 'Mona',
       species: 'Perro',
       breed: 'Golden retriever',
       sex: 'female',
@@ -57,7 +55,6 @@ export const reports: IReport[] = [
     id: 'asjdhbasdhjasdasd',
     pet: {
       id: 'asldnkasdlm',
-      name: 'Lala',
       species: 'Gato',
       breed: 'Persa',
       sex: 'female',
@@ -87,7 +84,6 @@ export const reports: IReport[] = [
     id: 'asjdhbasdhjasdasdasdasdasdasdasdasd',
     pet: {
       id: 'asdasdasdasdasda',
-      name: 'La excepcion a la regla',
       species: 'Gato',
       breed: 'Salvaje',
       sex: 'male',

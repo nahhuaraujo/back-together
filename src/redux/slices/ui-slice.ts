@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { IUI } from '../../models';
 import { getLocalStorage, setLocalStorage } from '../../utils/localStorage.util';
 
-const initialState = {
+const initialState: IUI = {
   filter: 'all',
   isDrawerOpen: false,
 };

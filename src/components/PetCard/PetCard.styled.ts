@@ -45,7 +45,6 @@ export const PetReport = styled.div`
   height: 50%;
   width: 100%;
   padding: 1rem;
-  ${defaultThinBorder};
   margin-left: 0;
   display: block;
   h2 {

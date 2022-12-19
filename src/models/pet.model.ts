@@ -1,6 +1,6 @@
 export interface IPet {
   id: string;
-  name: string;
+  name?: string;
   species: string;
   breed: string;
   sex: 'male' | 'female';
