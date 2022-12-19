@@ -1,3 +1,4 @@
+import { useUIActions } from '../../hooks';
 import * as S from './NavLink.styled';
 
 interface IProps {
@@ -5,7 +6,17 @@ interface IProps {
   children: React.ReactNode;
 }
 const NavLink = ({ to, children }: IProps) => {
-  return <S.NavLink to={to}>{children}</S.NavLink>;
+  const { closeDrawer } = useUIActions();
+
+  const clickHandler = () => {
+    closeDrawer();
+  };
+
+  return (
+    <S.NavLink to={to} onClick={clickHandler}>
+      {children}
+    </S.NavLink>
+  );
 };
 
 export default NavLink;
