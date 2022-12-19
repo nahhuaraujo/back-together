@@ -1,1 +1,1 @@
-export { default as PetCard } from './PerCard';
+export { default as PetCard } from './PetCard';

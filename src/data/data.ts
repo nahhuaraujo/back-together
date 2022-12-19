@@ -1,9 +1,10 @@
 import { IReport } from '../models';
 
-import toto from '../assets/pets/Pitbull.jpg';
 import coco from '../assets/pets/Bengal.jpg';
+import laexcepcion from '../assets/pets/Cool-cat.jpg';
 import mona from '../assets/pets/Golden.jpg';
 import lala from '../assets/pets/Persian.jpg';
+import toto from '../assets/pets/Pitbull.jpg';
 import nala from '../assets/pets/Sphynx.jpg';
 
 export const reports: IReport[] = [
@@ -14,12 +15,13 @@ export const reports: IReport[] = [
       name: 'Toto',
       species: 'Perro',
       breed: 'Pitbull',
-      sex: 'Macho',
+      sex: 'male',
       color: 'Gris',
       img: toto,
     },
-    lostAround: 'El barrio del hospital San Luis',
-    reward: true,
+    type: 'found',
+    location: 'El barrio del hospital San Luis',
+    reward: false,
   },
   {
     id: 'asjdhbasdhjsdasd',
@@ -28,11 +30,12 @@ export const reports: IReport[] = [
       name: 'Coco',
       species: 'Gato',
       breed: 'Bengala',
-      sex: 'Macho',
+      sex: 'male',
       color: 'Manchado',
       img: coco,
     },
-    lostAround: 'Cerca del centro',
+    type: 'lost',
+    location: 'Cerca del centro',
     reward: true,
   },
   {
@@ -42,11 +45,12 @@ export const reports: IReport[] = [
       name: 'Mona',
       species: 'Perro',
       breed: 'Golden retriever',
-      sex: 'Hembra',
+      sex: 'female',
       color: 'Marron',
       img: mona,
     },
-    lostAround: 'Sarmiento y Moreau de Justo',
+    type: 'found',
+    location: 'Sarmiento y Moreau de Justo',
     reward: false,
   },
   {
@@ -54,27 +58,44 @@ export const reports: IReport[] = [
     pet: {
       id: 'asldnkasdlm',
       name: 'Lala',
-      species: 'Gata',
+      species: 'Gato',
       breed: 'Persa',
-      sex: 'Hembra',
+      sex: 'female',
       color: 'Blanco',
       img: lala,
     },
-    lostAround: 'El barrio las violetas',
-    reward: true,
+    type: 'found',
+    location: 'El barrio las violetas',
+    reward: false,
   },
   {
     id: 'asjdhbasdhjasdasdasdasdasd',
     pet: {
       id: 'asjkdbljkasd',
       name: 'Nala',
-      species: 'Gata',
+      species: 'Gato',
       breed: 'Sphynx',
-      sex: 'Hembra',
+      sex: 'female',
       color: 'Piel',
       img: nala,
     },
-    lostAround: 'Por su casa',
+    type: 'lost',
+    location: 'Por la casa',
     reward: true,
+  },
+  {
+    id: 'asjdhbasdhjasdasdasdasdasdasdasdasd',
+    pet: {
+      id: 'asdasdasdasdasda',
+      name: 'La excepcion a la regla',
+      species: 'Gato',
+      breed: 'Salvaje',
+      sex: 'male',
+      color: 'Blanco',
+      img: laexcepcion,
+    },
+    type: 'found',
+    location: 'En todos lados',
+    reward: false,
   },
 ];

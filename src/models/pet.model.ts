@@ -3,7 +3,7 @@ export interface IPet {
   name: string;
   species: string;
   breed: string;
-  sex: string;
+  sex: 'male' | 'female';
   color: string;
   img: string;
 }

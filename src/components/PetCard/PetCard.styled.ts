@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { defaultThinBorder } from '../../styles/global-styles.styled';
 
 export const PetCard = styled.section`
   display: flex;
@@ -23,6 +24,7 @@ export const PetCard = styled.section`
 export const PetImage = styled.img`
   width: 100%;
   height: 100%;
+  ${defaultThinBorder};
   object-fit: cover;
   min-width: 100%;
   min-height: 500px;
@@ -35,10 +37,13 @@ export const PetReport = styled.div`
   height: 50%;
   width: 100%;
   padding: 1rem;
-  border: 1px solid black;
+  ${defaultThinBorder};
   margin-left: 0;
   display: block;
   h2 {
     font-size: 2rem;
+  }
+  span {
+    font-size: 1rem;
   }
 `;

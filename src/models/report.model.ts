@@ -3,6 +3,7 @@ import { IPet } from './';
 export interface IReport {
   id: string;
   pet: IPet;
-  lostAround: string;
+  type: 'found' | 'lost';
+  location: string;
   reward: boolean;
 }

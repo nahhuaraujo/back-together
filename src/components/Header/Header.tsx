@@ -1,11 +1,12 @@
+import { BTLogo, Burguer, MenuDrawer } from '../';
 import * as S from './Header.styled';
-import { BurguerMenu } from '../';
 
 const Header = () => {
   return (
     <S.Header>
-      <div>Back Together</div>
-      <BurguerMenu />
+      <BTLogo />
+      <Burguer />
+      <MenuDrawer />
     </S.Header>
   );
 };
