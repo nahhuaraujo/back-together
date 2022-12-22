@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { defaultPaddingStyle, lightGreenColorValue } from '../../styles/global-styles.styled';
 
-export const Input = styled.div`
+export const Checkbox = styled.div`
   min-width: max-content;
   width: 100%;
   display: grid;
@@ -11,10 +11,10 @@ export const Input = styled.div`
   label {
     margin-right: 1rem;
     text-align: right;
-    line-height: 35px;
   }
 
   input {
+    width: fit-content;
     border: 1px solid ${lightGreenColorValue};
     ${defaultPaddingStyle};
   }

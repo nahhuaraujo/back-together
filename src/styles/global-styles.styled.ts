@@ -11,6 +11,7 @@ export const defaultThinBorder = css`
 `;
 
 export const defaultPageStyle = css`
+  min-height: 100%;
   padding-top: 160px;
 `;
 
@@ -25,6 +26,20 @@ export const navLinkDefaultHover = css`
   }
 `;
 
-export const defaultPadding = css`
+export const defaultPaddingStyle = css`
   padding: 0.4rem 1rem;
+`;
+
+export const defaultButtonStyle = css`
+  width: max-content;
+  ${defaultPaddingStyle};
+  border: none;
+  background-color: ${lightGreenColorValue};
+  color: white;
+  display: block;
+
+  :hover {
+    background-color: ${darkGreenColorValue};
+    cursor: pointer;
+  }
 `;

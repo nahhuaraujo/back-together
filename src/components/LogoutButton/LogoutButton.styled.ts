@@ -1,11 +1,16 @@
 import styled from 'styled-components';
-import { navLinkDefaultHover } from '../../styles/global-styles.styled';
+import { defaultPaddingStyle, navLinkDefaultHover } from '../../styles/global-styles.styled';
 
 export const LogoutButton = styled.button`
+  width: fit-content;
+  ${defaultPaddingStyle};
+  border: none;
   color: black;
-  width: 100%;
+  background-color: transparent;
   text-decoration: none;
+  text-align: right;
   transition: 100ms;
+  cursor: pointer;
 
   ${navLinkDefaultHover};
 `;

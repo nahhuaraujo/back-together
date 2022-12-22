@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { defaultPaddingStyle, lightGreenColorValue } from '../../styles/global-styles.styled';
 
-export const Input = styled.div`
+export const Select = styled.div`
   min-width: max-content;
   width: 100%;
   display: grid;
@@ -14,8 +14,8 @@ export const Input = styled.div`
     line-height: 35px;
   }
 
-  input {
-    border: 1px solid ${lightGreenColorValue};
+  select {
     ${defaultPaddingStyle};
+    border: 1px solid ${lightGreenColorValue};
   }
 `;

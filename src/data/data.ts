@@ -11,12 +11,16 @@ export const reports: IReport[] = [
   {
     id: 'asjdhbasdhj',
     pet: {
-      id: 'asdasddas',
       species: 'Perro',
       breed: 'Pitbull',
       sex: 'male',
-      color: 'Gris',
+      description: 'Gris',
       img: toto,
+    },
+    user: {
+      id: 'asdsadsadasd',
+      email: 'test@test.com',
+      phoneNumber: '112333232',
     },
     type: 'found',
     location: 'El barrio del hospital San Luis',
@@ -25,13 +29,17 @@ export const reports: IReport[] = [
   {
     id: 'asjdhbasdhjsdasd',
     pet: {
-      id: 'akjsdlkjnsa',
       name: 'Coco',
       species: 'Gato',
       breed: 'Bengala',
       sex: 'male',
-      color: 'Manchado',
+      description: 'Manchado',
       img: coco,
+    },
+    user: {
+      id: 'asdsadsadasd',
+      email: 'test@test.com',
+      phoneNumber: '112333232',
     },
     type: 'lost',
     location: 'Cerca del centro',
@@ -40,12 +48,16 @@ export const reports: IReport[] = [
   {
     id: 'asjdhbasdhjddsads',
     pet: {
-      id: 'asdjnlasdmlas',
       species: 'Perro',
       breed: 'Golden retriever',
       sex: 'female',
-      color: 'Marron',
+      description: 'Marron',
       img: mona,
+    },
+    user: {
+      id: 'asdsadsadasd',
+      email: 'test@test.com',
+      phoneNumber: '112333232',
     },
     type: 'found',
     location: 'Sarmiento y Moreau de Justo',
@@ -54,12 +66,16 @@ export const reports: IReport[] = [
   {
     id: 'asjdhbasdhjasdasd',
     pet: {
-      id: 'asldnkasdlm',
       species: 'Gato',
       breed: 'Persa',
       sex: 'female',
-      color: 'Blanco',
+      description: 'Blanco',
       img: lala,
+    },
+    user: {
+      id: 'asdsadsadasd',
+      email: 'test@test.com',
+      phoneNumber: '112333232',
     },
     type: 'found',
     location: 'El barrio las violetas',
@@ -68,13 +84,17 @@ export const reports: IReport[] = [
   {
     id: 'asjdhbasdhjasdasdasdasdasd',
     pet: {
-      id: 'asjkdbljkasd',
       name: 'Nala',
       species: 'Gato',
       breed: 'Sphynx',
       sex: 'female',
-      color: 'Piel',
+      description: 'Piel',
       img: nala,
+    },
+    user: {
+      id: 'asdsadsadasd',
+      email: 'test@test.com',
+      phoneNumber: '112333232',
     },
     type: 'lost',
     location: 'Por la casa',
@@ -83,12 +103,16 @@ export const reports: IReport[] = [
   {
     id: 'asjdhbasdhjasdasdasdasdasdasdasdasd',
     pet: {
-      id: 'asdasdasdasdasda',
       species: 'Gato',
       breed: 'Salvaje',
       sex: 'male',
-      color: 'Blanco',
+      description: 'Blanco',
       img: laexcepcion,
+    },
+    user: {
+      id: 'asdsadsadasd',
+      email: 'test@test.com',
+      phoneNumber: '112333232',
     },
     type: 'found',
     location: 'En todos lados',

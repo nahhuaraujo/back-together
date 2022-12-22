@@ -1,7 +1,7 @@
 export enum PublicRoutes {
   HOME = '/',
   LOGIN = '/login',
-  ABOUT = '/about',
+  ABOUT_US = '/about-us',
 }
 
 export enum PrivateRoutes {

@@ -20,6 +20,7 @@ export const MenuDrawer = styled.nav<IMenuDrawerProps>`
     height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 
     li:first-child {
       button {
@@ -37,12 +38,6 @@ export const MenuDrawer = styled.nav<IMenuDrawerProps>`
     li {
       list-style: none;
       display: block;
-    }
-
-    button {
-      text-align: inherit;
-      cursor: pointer;
-      ${unstyledButton};
     }
   }
 `;

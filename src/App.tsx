@@ -2,8 +2,10 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import * as S from './App.styled';
 import { Header } from './components';
-import { Home, Login, NotFound } from './pages';
+import { AuthGuard } from './guards';
+import { CreateReport, Home, Login, NotFound } from './pages';
 import store from './redux/store';
+import { PrivateRoutes, PublicRoutes } from './routes';
 
 const App = () => {
   return (
@@ -12,8 +14,11 @@ const App = () => {
         <Router>
           <Header />
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/login' element={<Login />} />
+            <Route path={PublicRoutes.HOME} element={<Home />} />
+            <Route path={PublicRoutes.LOGIN} element={<Login />} />
+            <Route element={<AuthGuard />}>
+              <Route path={PrivateRoutes.CREATE_REPORT} element={<CreateReport />} />
+            </Route>
             <Route path='*' element={<NotFound />} />
           </Routes>
         </Router>

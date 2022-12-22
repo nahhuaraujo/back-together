@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { darkGreenColorValue, defaultPageStyle, defaultThinBorder } from '../../styles/global-styles.styled';
+import { defaultPageStyle, defaultThinBorder } from '../../styles/global-styles.styled';
 
-export const Login = styled.main`
+export const CreateReport = styled.main`
   ${defaultPageStyle}
 `;
 
-export const LoginForm = styled.form`
+export const ReportForm = styled.form`
   padding: 1rem;
   height: 100%;
   ${defaultThinBorder}
@@ -18,10 +18,9 @@ export const LoginForm = styled.form`
 
 export const FormContainer = styled.div`
   min-width: max-content;
-  width: 50%;
-  height: 400px;
+  width: 80%;
+  min-height: max-content;
   padding: 1rem;
   margin: 0 auto;
   background-color: white;
-  box-shadow: 10px 10px ${darkGreenColorValue};
 `;
