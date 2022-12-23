@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  position: fixed;
   width: 100%;
+  height: 120px;
+  padding: 1rem;
+  position: fixed;
   font-size: 2rem;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 25%;
+  align-items: center;
   background-color: white;
   z-index: 1;
 `;

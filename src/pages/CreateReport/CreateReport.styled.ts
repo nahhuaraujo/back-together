@@ -6,8 +6,8 @@ export const CreateReport = styled.main`
 `;
 
 export const FormContainer = styled.div`
-  min-width: max-content;
-  width: 70%;
+  max-width: 70%;
+  min-width: fit-content;
   min-height: max-content;
   padding: 1rem;
   margin: 0 auto;

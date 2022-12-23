@@ -7,7 +7,7 @@ interface IMenuDrawerProps {
 export const MenuDrawer = styled.nav<IMenuDrawerProps>`
   padding: 1rem;
   text-align: right;
-  width: max-content;
+  width: 50vw;
   height: 100vh;
   background-color: ${lightGreenColorValue};
   position: fixed;
@@ -15,6 +15,10 @@ export const MenuDrawer = styled.nav<IMenuDrawerProps>`
   right: ${({ isOpen }) => (isOpen ? 0 : '-200%')};
   z-index: 1;
   transition: 300ms;
+
+  @media (max-width: 600px) {
+    width: 80vw;
+  }
 
   ul {
     height: 100%;

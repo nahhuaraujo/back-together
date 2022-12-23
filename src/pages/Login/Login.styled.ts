@@ -17,7 +17,8 @@ export const LoginForm = styled.form`
 `;
 
 export const FormContainer = styled.div`
-  min-width: max-content;
+  max-width: 50%;
+  min-width: fit-content;
   width: 50%;
   height: 400px;
   padding: 1rem;
