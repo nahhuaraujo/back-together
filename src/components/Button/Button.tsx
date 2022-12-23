@@ -1,10 +1,10 @@
 import * as S from './Button.styled';
 
 interface IProps {
-  disabled: boolean;
+  disabled?: boolean;
   children: React.ReactNode;
 }
-const Button = ({ disabled, children }: IProps) => {
+const Button = ({ disabled = false, children }: IProps) => {
   return <S.Button disabled={disabled}>{children}</S.Button>;
 };
 

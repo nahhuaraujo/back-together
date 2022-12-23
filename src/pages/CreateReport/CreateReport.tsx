@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import { v4 as uuid } from 'uuid';
 import { Button, Checkbox, Input, InputFile, Select } from '../../components';
 import { useForm } from '../../hooks';
 import { IReport } from '../../models';
@@ -32,7 +31,7 @@ const CreateReport = () => {
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const newReport: IReport = {
-      id: uuid(),
+      id: crypto.randomUUID(),
       pet: {
         name: formValues.name,
         species: formValues.species,

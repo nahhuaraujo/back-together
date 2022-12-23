@@ -20,9 +20,10 @@ const MenuDrawer = () => {
           <li>
             <button onClick={clickHandler}>X</button>
           </li>
+          <li>{user.token ? <LogoutButton /> : <NavLink to={PublicRoutes.LOGIN}>Iniciar sesion</NavLink>}</li>
           <li>
-            <NavLink to={PublicRoutes.HOME} filter='found'>
-              Encontrados
+            <NavLink to={PublicRoutes.HOME} filter='all'>
+              Todos
             </NavLink>
           </li>
           <li>
@@ -31,14 +32,13 @@ const MenuDrawer = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to={PublicRoutes.HOME} filter='all'>
-              Todos
+            <NavLink to={PublicRoutes.HOME} filter='found'>
+              Encontrados
             </NavLink>
           </li>
           <li>
             <NavLink to={PublicRoutes.ABOUT_US}>Sobre nosotros</NavLink>
           </li>
-          <li>{user.token ? <LogoutButton /> : <NavLink to={PublicRoutes.LOGIN}>Login</NavLink>}</li>
           <li>
             <div>Encontraste o perdiste una mascota?</div>
             <NavLink to={PrivateRoutes.CREATE_REPORT}>Reportala aca</NavLink>

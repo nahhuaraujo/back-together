@@ -10,7 +10,7 @@ const LogoutButton = () => {
     closeDrawer();
   };
 
-  return <S.LogoutButton onClick={clickHandler}>Logout</S.LogoutButton>;
+  return <S.LogoutButton onClick={clickHandler}>Cerrar sesion</S.LogoutButton>;
 };
 
 export default LogoutButton;

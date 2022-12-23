@@ -17,7 +17,6 @@ export const useForm = (initialValues: any) => {
 
   const selectFileHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!!e.target.files?.length) {
-      console.log('File handler:', e.target.files[0]);
       setFormValues({ ...formValues, [e.target.id]: e.target.files[0] });
     }
   };

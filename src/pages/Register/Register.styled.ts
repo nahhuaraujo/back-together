@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { darkGreenColorValue, defaultPageStyle, defaultThinBorder } from '../../styles/global-styles.styled';
 
-export const Login = styled.main`
+export const Register = styled.main`
   ${defaultPageStyle}
 `;
 
-export const FormContainer = styled.div`
+export const RegisterContainer = styled.div`
   width: fit-content;
   min-width: fit-content;
   padding: 1rem;
@@ -14,7 +14,7 @@ export const FormContainer = styled.div`
   box-shadow: 10px 10px ${darkGreenColorValue};
 `;
 
-export const LoginForm = styled.form`
+export const RegisterForm = styled.form`
   padding: 1rem;
   ${defaultThinBorder}
   display: flex;
