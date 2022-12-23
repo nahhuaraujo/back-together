@@ -9,6 +9,8 @@ const Login = () => {
   const { setUserData } = useUserActions();
   const navigate = useNavigate();
 
+  const isDisabled = !formValues.email || !formValues.password;
+
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setUserData({
@@ -32,7 +34,7 @@ const Login = () => {
             label='Ingrese su contraseña'
             onChange={changeHandler}
           />
-          <Button disabled={!formValues.email || !formValues.password}>Iniciar sesion</Button>
+          <Button disabled={isDisabled}>Iniciar sesion</Button>
           <NavLink to='/register'>Registrate aca</NavLink>
         </S.LoginForm>
       </S.FormContainer>

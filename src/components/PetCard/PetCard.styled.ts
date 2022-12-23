@@ -22,10 +22,8 @@ export const PetCard = styled.section`
     transform: scale(1.03);
   }
 
-  @media (max-width: 900px) {
-    width: 100%;
-    height: 50%;
-    display: block;
+  @media (max-width: 600px) {
+    width: 90%;
   }
 `;
 

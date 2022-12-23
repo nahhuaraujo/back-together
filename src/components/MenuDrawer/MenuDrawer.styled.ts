@@ -7,7 +7,7 @@ interface IMenuDrawerProps {
 export const MenuDrawer = styled.nav<IMenuDrawerProps>`
   padding: 1rem;
   text-align: right;
-  width: 50%;
+  width: max-content;
   height: 100vh;
   background-color: ${lightGreenColorValue};
   position: fixed;

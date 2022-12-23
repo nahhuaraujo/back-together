@@ -40,7 +40,8 @@ const MenuDrawer = () => {
           </li>
           <li>{user.token ? <LogoutButton /> : <NavLink to={PublicRoutes.LOGIN}>Login</NavLink>}</li>
           <li>
-            Encontraste o perdiste una mascota? <NavLink to={PrivateRoutes.CREATE_REPORT}>Reportala aca</NavLink>
+            <div>Encontraste o perdiste una mascota?</div>
+            <NavLink to={PrivateRoutes.CREATE_REPORT}>Reportala aca</NavLink>
           </li>
         </ul>
       </S.MenuDrawer>

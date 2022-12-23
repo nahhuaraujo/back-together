@@ -12,7 +12,7 @@ export const defaultThinBorder = css`
 
 export const defaultPageStyle = css`
   min-height: 100%;
-  padding-top: 160px;
+  padding: 160px 1rem 0;
 `;
 
 export const unstyledButton = css`

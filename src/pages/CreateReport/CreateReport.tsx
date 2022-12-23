@@ -26,6 +26,7 @@ const CreateReport = () => {
     !formValues.breed ||
     !formValues.sex ||
     !formValues.description ||
+    !formValues.img ||
     !formValues.location;
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
@@ -57,13 +58,9 @@ const CreateReport = () => {
             <option value='found'>He encontrado una mascota</option>
             <option value='lost'>He perdido una mascota</option>
           </Select>
-          <Input
-            id='name'
-            value={formValues.name}
-            label='Ingrese nombre de la mascota'
-            onChange={changeHandler}
-            disabled={formValues.type !== 'lost'}
-          />
+          {formValues.type === 'lost' && (
+            <Input id='name' value={formValues.name} label='Ingrese nombre de la mascota' onChange={changeHandler} />
+          )}
           <Select id='species' label='Seleccione la especie' value={formValues.species} onChange={selectHandler}>
             <option value='dog'>Perro</option>
             <option value='cat'>Gato</option>
@@ -87,8 +84,10 @@ const CreateReport = () => {
             }`}
             onChange={changeHandler}
           />
-          <Checkbox id='reward' label='Se ofrece recompensa' checkHandler={checkHandler} />
           <InputFile id='img' label='Seleccione una imagen' onChange={selectFileHandler} />
+          {formValues.type === 'lost' && (
+            <Checkbox id='reward' label='Se ofrece recompensa' checkHandler={checkHandler} />
+          )}
           <Button disabled={isDisabled}>Crear reporte</Button>
         </S.ReportForm>
       </S.FormContainer>
