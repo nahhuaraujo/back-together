@@ -1,3 +1,4 @@
+import { Validator } from '../../utils/validators.util';
 import * as S from './Input.styled';
 
 interface IProps {
@@ -5,12 +6,13 @@ interface IProps {
   type?: 'text' | 'email' | 'password';
   value: string;
   label?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>, validators: Validator[]) => void;
   disabled?: boolean;
+  validators: Validator[];
 }
-const Input = ({ id, type = 'text', value, label, onChange, disabled = false }: IProps) => {
+const Input = ({ id, type = 'text', value, label, onChange, disabled = false, validators }: IProps) => {
   const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onChange(e);
+    onChange(e, validators);
   };
 
   return (

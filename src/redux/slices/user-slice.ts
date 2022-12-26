@@ -5,7 +5,7 @@ import { clearLocalStorage, getLocalStorage, setLocalStorage } from '../../utils
 const initialState: IUser = {
   id: '',
   email: '',
-  phoneNumber: '',
+  phone: '',
   token: '',
 };
 

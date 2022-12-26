@@ -10,11 +10,11 @@ enum ValidatorTypes {
 
 export const VALIDATOR_REQUIRE = () => ({ type: ValidatorTypes.VALIDATOR_TYPE_REQUIRE });
 export const VALIDATOR_FILE = () => ({ type: ValidatorTypes.VALIDATOR_TYPE_FILE });
-export const VALIDATOR_MINLENGTH = (val: string) => ({
+export const VALIDATOR_MINLENGTH = (val: number) => ({
   type: ValidatorTypes.VALIDATOR_TYPE_MINLENGTH,
   val,
 });
-export const VALIDATOR_MAXLENGTH = (val: string) => ({
+export const VALIDATOR_MAXLENGTH = (val: number) => ({
   type: ValidatorTypes.VALIDATOR_TYPE_MAXLENGTH,
   val,
 });
@@ -22,9 +22,9 @@ export const VALIDATOR_MIN = (val: number) => ({ type: ValidatorTypes.VALIDATOR_
 export const VALIDATOR_MAX = (val: number) => ({ type: ValidatorTypes.VALIDATOR_TYPE_MAX, val });
 export const VALIDATOR_EMAIL = () => ({ type: ValidatorTypes.VALIDATOR_TYPE_EMAIL });
 
-interface Validator {
+export interface Validator {
   type: ValidatorTypes;
-  val: string | number;
+  val?: any;
 }
 
 export const validate = (value: any, validators: Validator[]) => {

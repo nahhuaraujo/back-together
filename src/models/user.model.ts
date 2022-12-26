@@ -1,6 +1,6 @@
 export interface IUser {
   id: string;
   email: string;
-  phoneNumber: string;
+  phone: string;
   token?: string;
 }

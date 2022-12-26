@@ -20,7 +20,7 @@ export const reports: IReport[] = [
     user: {
       id: 'asdsadsadasd',
       email: 'test@test.com',
-      phoneNumber: '112333232',
+      phone: '112333232',
     },
     type: 'found',
     location: 'El barrio del hospital San Luis',
@@ -39,7 +39,7 @@ export const reports: IReport[] = [
     user: {
       id: 'asdsadsadasd',
       email: 'test@test.com',
-      phoneNumber: '112333232',
+      phone: '112333232',
     },
     type: 'lost',
     location: 'Cerca del centro',
@@ -57,7 +57,7 @@ export const reports: IReport[] = [
     user: {
       id: 'asdsadsadasd',
       email: 'test@test.com',
-      phoneNumber: '112333232',
+      phone: '112333232',
     },
     type: 'found',
     location: 'Sarmiento y Moreau de Justo',
@@ -75,7 +75,7 @@ export const reports: IReport[] = [
     user: {
       id: 'asdsadsadasd',
       email: 'test@test.com',
-      phoneNumber: '112333232',
+      phone: '112333232',
     },
     type: 'found',
     location: 'El barrio las violetas',
@@ -94,7 +94,7 @@ export const reports: IReport[] = [
     user: {
       id: 'asdsadsadasd',
       email: 'test@test.com',
-      phoneNumber: '112333232',
+      phone: '112333232',
     },
     type: 'lost',
     location: 'Por la casa',
@@ -112,7 +112,7 @@ export const reports: IReport[] = [
     user: {
       id: 'asdsadsadasd',
       email: 'test@test.com',
-      phoneNumber: '112333232',
+      phone: '112333232',
     },
     type: 'found',
     location: 'En todos lados',
