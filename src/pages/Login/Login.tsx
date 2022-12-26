@@ -26,7 +26,7 @@ const Login = () => {
     e.preventDefault();
     (async () => {
       try {
-        const response = await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_API}/login`, {
+        const response = await axios.post(`https://back-together-be-j60v-main-khnvo5awqq-wm.a.run.app/login`, {
           email: formValues.email.value,
           password: formValues.password.value,
         });
