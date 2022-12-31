@@ -1,15 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { IUI, IUser } from '../models';
-import { uiSlice, userSlice } from './slices';
+import { IReportState, IUIState, IUserState, reportSlice, uiSlice, userSlice } from './slices';
 
 export interface IAppStore {
-  ui: IUI;
-  user: IUser;
+  ui: IUIState;
+  user: IUserState;
+  report: IReportState;
 }
 
 export default configureStore<IAppStore>({
   reducer: {
     ui: uiSlice.reducer,
     user: userSlice.reducer,
+    report: reportSlice.reducer,
   },
 });

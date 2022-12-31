@@ -4,7 +4,7 @@ import { IAppStore } from '../../redux/store';
 import * as S from './BTLogo.styled';
 
 const BTLogo = () => {
-  const { filter } = useSelector((store: IAppStore) => store.ui);
+  const { filter } = useSelector((store: IAppStore) => store.report);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

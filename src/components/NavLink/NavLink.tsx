@@ -1,20 +1,21 @@
 import { useSelector } from 'react-redux';
-import { useUIActions } from '../../hooks';
+import { useReportActions, useUIActions } from '../../hooks';
 import { IAppStore } from '../../redux/store';
 import * as S from './NavLink.styled';
 
 interface IProps {
   to: string;
+  filter?: 'lost' | 'found' | 'all';
   children: React.ReactNode;
-  filter?: string;
 }
-const NavLink = ({ to, children, filter }: IProps) => {
-  const { filter: selectedFilter, isDrawerOpen } = useSelector((store: IAppStore) => store.ui);
-  const { closeDrawer, changeFilter } = useUIActions();
+const NavLink = ({ to, filter = 'all', children }: IProps) => {
+  const { isDrawerOpen } = useSelector((store: IAppStore) => store.ui);
+  const { closeDrawer } = useUIActions();
+  const { changeFilter } = useReportActions();
 
   const clickHandler = () => {
     if (isDrawerOpen) closeDrawer();
-    changeFilter(filter ? filter : selectedFilter);
+    changeFilter(filter);
   };
 
   return (

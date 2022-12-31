@@ -1,26 +1,27 @@
-import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { CreateReportButton, PetCard } from '../../components';
-import { reports } from '../../data';
-import { IReport } from '../../models';
+import { useReportActions } from '../../hooks';
 import { IAppStore } from '../../redux/store';
 import * as S from './Home.styled';
 
 const Home = () => {
-  const [filteredReports, setFilteredReports] = useState<IReport[]>([]);
-  const { ui, user } = useSelector((store: IAppStore) => store);
+  const { setReports } = useReportActions();
+  const { user, report } = useSelector((store: IAppStore) => store);
 
   useEffect(() => {
-    if (ui.filter === 'all') return setFilteredReports(reports);
-    if (ui.filter === 'found') return setFilteredReports(reports.filter(report => report.type === 'found'));
-    if (ui.filter === 'lost') return setFilteredReports(reports.filter(report => report.type === 'lost'));
-  }, [ui.filter]);
+    (async () => {
+      const response = await axios.get(`${process.env.REACT_APP_BACK_TOGETHER_API}/report/find-all`);
+      setReports(response.data.payload);
+    })();
+  }, []);
 
   return (
     <S.Home>
       {user.token ? <CreateReportButton /> : null}
-      {filteredReports.map(report => (
-        <PetCard key={report.id} report={report} />
+      {report.list.map(report => (
+        <PetCard key={report._id} report={report} />
       ))}
     </S.Home>
   );
