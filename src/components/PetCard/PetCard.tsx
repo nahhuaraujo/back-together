@@ -14,11 +14,12 @@ const PetCard = ({ report }: IProps) => {
           {report.pet.name}
           {report.type === 'lost' && report.pet.sex === 'male' && ' esta perdido'}
           {report.type === 'lost' && report.pet.sex === 'female' && ' esta perdida'}
-          {report.type === 'found' && report.pet.sex === 'male' && `${report.pet.species} macho encontrado`}
-          {report.type === 'found' && report.pet.sex === 'female' && `${report.pet.species} hembra encontrada`}
+          {report.type === 'found' && report.pet.sex === 'male' && `Perro macho encontrado`}
+          {report.type === 'found' && report.pet.sex === 'female' && `Perra hembra encontrada`}
         </h2>
         <div>
           <p>{report.location}</p>
+          <p>{report.pet.description}</p>
           <p>{report.reward ? 'Se ofrece recompenza' : null}</p>
         </div>
       </S.PetReport>

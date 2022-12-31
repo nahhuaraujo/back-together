@@ -22,9 +22,7 @@ const MenuDrawer = () => {
           </li>
           <li>{user.token ? <LogoutButton /> : <NavLink to={PublicRoutes.LOGIN}>Iniciar sesion</NavLink>}</li>
           <li>
-            <NavLink to={PublicRoutes.HOME} filter='all'>
-              Todos
-            </NavLink>
+            <NavLink to={PublicRoutes.HOME}>Todos</NavLink>
           </li>
           <li>
             <NavLink to={PublicRoutes.HOME} filter='lost'>
