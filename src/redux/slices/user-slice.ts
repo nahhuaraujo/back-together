@@ -2,8 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 import { IUser } from '../../models/user.model';
 import { clearLocalStorage, getLocalStorage, setLocalStorage } from '../../utils/localStorage.util';
 
-const initialState: IUser = {
-  id: '',
+export interface IUserState extends IUser {}
+
+const initialState: IUserState = {
+  _id: '',
   email: '',
   phone: '',
   token: '',

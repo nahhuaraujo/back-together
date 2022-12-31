@@ -1,7 +1,7 @@
 import { IPet, IUser } from './';
 
 export interface IReport {
-  id: string;
+  _id: string;
   pet: IPet;
   user: IUser;
   type: 'found' | 'lost';
