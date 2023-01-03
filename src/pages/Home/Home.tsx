@@ -15,7 +15,7 @@ const Home = () => {
       const response = await axios.get(`${process.env.REACT_APP_BACK_TOGETHER_API}/report/find-all`);
       setReports(response.data.payload);
     })();
-  }, []);
+  }, [setReports]);
 
   return (
     <S.Home>
