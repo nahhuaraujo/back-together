@@ -31,10 +31,10 @@ const Login = () => {
           password: formValues.password.value,
         });
         setUserData({
-          _id: response.data._id,
-          phone: response.data.phone,
-          email: response.data.email,
-          token: response.data.token,
+          _id: response.data.payload._id,
+          phone: response.data.payload.phone,
+          email: response.data.payload.email,
+          token: response.data.payload.token,
         });
         navigate(PublicRoutes.HOME);
       } catch (e) {

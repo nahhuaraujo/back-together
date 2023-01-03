@@ -23,6 +23,7 @@ const Home = () => {
       {report.list.map(report => (
         <PetCard key={report._id} report={report} />
       ))}
+      {report.list.length === 0 && <h2>No se encontraron reportes para mostrar</h2>}
     </S.Home>
   );
 };
