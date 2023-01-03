@@ -12,10 +12,14 @@ const Home = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get(`${process.env.REACT_APP_BACK_TOGETHER_API}/report/find-all`);
-      setReports(response.data.payload);
+      try {
+        const response = await axios.get(`${process.env.REACT_APP_BACK_TOGETHER_API}/report/find-all`);
+        setReports(response.data.payload);
+      } catch (e) {
+        console.log((e as Error).message);
+      }
     })();
-  }, [setReports]);
+  }, []);
 
   return (
     <S.Home>
