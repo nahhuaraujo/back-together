@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { CreateReportButton, PetCard } from '../../components';
 import { useReportActions } from '../../hooks';
@@ -10,7 +10,7 @@ const Home = () => {
   const { setReports } = useReportActions();
   const { user, report } = useSelector((store: IAppStore) => store);
 
-  useEffect(() => {
+  const getReports = useCallback(() => {
     (async () => {
       try {
         const response = await axios.get(`${process.env.REACT_APP_BACK_TOGETHER_API}/report/find-all`);
@@ -19,7 +19,11 @@ const Home = () => {
         console.log((e as Error).message);
       }
     })();
-  }, []);
+  }, [setReports]);
+
+  useEffect(() => {
+    getReports();
+  }, [getReports]);
 
   return (
     <S.Home>
