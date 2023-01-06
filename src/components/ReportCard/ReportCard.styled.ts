@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { darkGreenColorValue, defaultThinBorder } from '../../styles/global-styles.styled';
 
-export const PetCard = styled.section`
+export const ReportCard = styled.section`
   display: flex;
   margin: 0 auto 1rem;
   padding: 1rem;
@@ -27,7 +27,7 @@ export const PetCard = styled.section`
   }
 `;
 
-export const PetImage = styled.img`
+export const ReportImage = styled.img`
   width: 100%;
   height: 100%;
   ${defaultThinBorder};
@@ -39,7 +39,7 @@ export const PetImage = styled.img`
   display: block;
 `;
 
-export const PetReport = styled.div`
+export const ReportDescription = styled.div`
   height: 50%;
   width: 100%;
   padding: 1rem;
@@ -51,4 +51,8 @@ export const PetReport = styled.div`
   span {
     font-size: 1rem;
   }
+`;
+
+export const ReportReward = styled.p`
+  font-weight: bold;
 `;

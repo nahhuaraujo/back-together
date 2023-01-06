@@ -1,7 +1,7 @@
 import * as S from './NotFound.styled';
 
 const NotFound = () => {
-  return <S.NotFound>Not yet available</S.NotFound>;
+  return <S.NotFound>La pagina solicitada no fue encontrada</S.NotFound>;
 };
 
 export default NotFound;
