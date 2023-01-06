@@ -32,3 +32,5 @@ export const reportSlice = createSlice({
     },
   },
 });
+
+export const reportActions = reportSlice.actions;

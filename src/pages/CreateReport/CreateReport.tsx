@@ -1,17 +1,20 @@
 import axios from 'axios';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Button, Checkbox, Input, InputFile, Select } from '../../components';
 import { useForm } from '../../hooks';
 import { IReport } from '../../models';
+import { uiActions } from '../../redux/slices';
 import { IAppStore } from '../../redux/store';
+import { PublicRoutes } from '../../routes';
 import { VALIDATOR_REQUIRE } from '../../utils/validators.util';
 import * as S from './CreateReport.styled';
 
 const CreateReport = () => {
   const { _id, email, phone } = useSelector((store: IAppStore) => store.user);
   const navigate = useNavigate();
-  const { formValues, inputHandler, selectHandler, checkHandler, selectFileHandler, clearValues } = useForm({
+  const dispatch = useDispatch();
+  const { formValues, inputHandler, selectHandler, checkHandler, selectFileHandler } = useForm({
     type: {
       value: '',
       isValid: false,
@@ -51,6 +54,7 @@ const CreateReport = () => {
   });
 
   let isDisabled =
+    (formValues.type.value === 'lost' && !formValues.name.isValid) ||
     !formValues.type.isValid ||
     !formValues.species.isValid ||
     !formValues.breed.isValid ||
@@ -77,13 +81,15 @@ const CreateReport = () => {
     };
     (async () => {
       try {
+        dispatch(uiActions.setIsLoading(true));
         await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_API}/report`, newReport);
+        navigate(PublicRoutes.HOME);
       } catch (e) {
         console.log((e as Error).message);
+      } finally {
+        dispatch(uiActions.setIsLoading(false));
       }
     })();
-    clearValues();
-    navigate('/');
   };
 
   return (
@@ -139,7 +145,7 @@ const CreateReport = () => {
           <Input
             id='description'
             value={formValues.description.value}
-            label='Ingrese una brave descripcion'
+            label='Ingrese una breve descripcion'
             onChange={inputHandler}
             validators={[VALIDATOR_REQUIRE()]}
           />

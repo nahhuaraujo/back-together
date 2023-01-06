@@ -1,5 +1,5 @@
-import { useSelector } from 'react-redux';
-import { useReportActions, useUIActions } from '../../hooks';
+import { useDispatch, useSelector } from 'react-redux';
+import { reportActions, uiActions } from '../../redux/slices';
 import { IAppStore } from '../../redux/store';
 import * as S from './NavLink.styled';
 
@@ -9,13 +9,12 @@ interface IProps {
   children: React.ReactNode;
 }
 const NavLink = ({ to, filter = 'all', children }: IProps) => {
+  const dispatch = useDispatch();
   const { isDrawerOpen } = useSelector((store: IAppStore) => store.ui);
-  const { closeDrawer } = useUIActions();
-  const { changeFilter } = useReportActions();
 
   const clickHandler = () => {
-    if (isDrawerOpen) closeDrawer();
-    changeFilter(filter);
+    if (isDrawerOpen) dispatch(uiActions.closeDrawer());
+    dispatch(reportActions.changeFilter(filter));
   };
 
   return (

@@ -1,16 +1,16 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { LogoutButton, NavLink } from '../';
-import { useUIActions } from '../../hooks';
+import { uiActions } from '../../redux/slices';
 import { IAppStore } from '../../redux/store';
 import { PrivateRoutes, PublicRoutes } from '../../routes';
 import * as S from './MenuDrawer.styled';
 
 const MenuDrawer = () => {
   const { ui, user } = useSelector((store: IAppStore) => store);
-  const { closeDrawer } = useUIActions();
+  const dispatch = useDispatch();
 
   const clickHandler = () => {
-    closeDrawer();
+    dispatch(uiActions.closeDrawer());
   };
 
   return (

@@ -1,13 +1,17 @@
-import { useUIActions, useUserActions } from '../../hooks';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { uiActions, userActions } from '../../redux/slices';
+import { PublicRoutes } from '../../routes';
 import * as S from './LogoutButton.styled';
 
 const LogoutButton = () => {
-  const { clearUserData } = useUserActions();
-  const { closeDrawer } = useUIActions();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const clickHandler = () => {
-    clearUserData();
-    closeDrawer();
+    dispatch(userActions.clearUserData());
+    dispatch(uiActions.closeDrawer());
+    navigate(PublicRoutes.LOGIN);
   };
 
   return <S.LogoutButton onClick={clickHandler}>Cerrar sesion</S.LogoutButton>;

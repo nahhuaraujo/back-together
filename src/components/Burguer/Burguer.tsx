@@ -1,11 +1,12 @@
-import { useUIActions } from '../../hooks';
+import { useDispatch } from 'react-redux';
+import { uiActions } from '../../redux/slices';
 import * as S from './Burguer.styled';
 
 const Burguer = () => {
-  const { openDrawer } = useUIActions();
+  const dispatch = useDispatch();
 
   const clickHandler = () => {
-    openDrawer();
+    dispatch(uiActions.openDrawer());
   };
 
   return (
