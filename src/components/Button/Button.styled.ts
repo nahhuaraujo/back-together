@@ -13,7 +13,7 @@ export const Button = styled.button<ILoginButtonProps>`
   ${defaultButtonStyle};
   background-color: ${({ disabled }) => (disabled ? `${darkGreyColorValue}` : `${lightGreenColorValue}`)};
 
-  :hover {
+  :active {
     background-color: ${({ disabled }) => (disabled ? `${darkGreyColorValue}` : `${darkGreenColorValue}`)};
   }
 `;

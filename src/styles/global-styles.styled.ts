@@ -20,12 +20,6 @@ export const unstyledButton = css`
   border: none;
 `;
 
-export const navLinkDefaultHover = css`
-  :hover {
-    background-color: ${darkGreyColorValue};
-  }
-`;
-
 export const defaultPaddingStyle = css`
   padding: 0.4rem 1rem;
 `;
@@ -39,7 +33,19 @@ export const defaultButtonStyle = css`
   display: block;
 
   :hover {
-    background-color: ${darkGreenColorValue};
     cursor: pointer;
+  }
+`;
+
+export const navLinkDefaultHover = css`
+  :hover {
+    background-color: ${darkGreyColorValue};
+  }
+`;
+
+export const navLinkDefaultActive = css`
+  :active {
+    background-color: ${darkGreenColorValue};
+    color: white;
   }
 `;
