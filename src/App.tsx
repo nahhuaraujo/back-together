@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import * as S from './App.styled';
-import { Header } from './components';
+import { Header, Spinner } from './components';
 import { AuthGuard } from './guards';
 import { CreateReport, Home, Login, NotFound, Register } from './pages';
 import store from './redux/store';
@@ -13,6 +13,7 @@ const App = () => {
       <Provider store={store}>
         <Router>
           <Header />
+          <Spinner />
           <Routes>
             <Route path={PublicRoutes.HOME} element={<Home />} />
             <Route path={PublicRoutes.LOGIN} element={<Login />} />

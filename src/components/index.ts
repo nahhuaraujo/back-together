@@ -9,5 +9,6 @@ export * from './InputFile';
 export * from './LogoutButton';
 export * from './MenuDrawer';
 export * from './NavLink';
-export * from './PetCard';
+export * from './ReportCard';
 export * from './Select';
+export * from './Spinner';

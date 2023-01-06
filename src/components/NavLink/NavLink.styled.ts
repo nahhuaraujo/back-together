@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { defaultPaddingStyle, navLinkDefaultHover } from '../../styles/global-styles.styled';
+import { defaultPaddingStyle, navLinkDefaultActive, navLinkDefaultHover } from '../../styles/global-styles.styled';
 
 interface INavLinkProps {
   onClick: () => void;
@@ -13,4 +13,5 @@ export const NavLink = styled(Link)<INavLinkProps>`
   transition: 100ms;
 
   ${navLinkDefaultHover};
+  ${navLinkDefaultActive}
 `;

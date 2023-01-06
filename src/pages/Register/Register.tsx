@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { uiActions } from '../../redux/slices';
 import { Button, Input } from '../../components';
 import { useForm } from '../../hooks';
 import { PublicRoutes } from '../../routes';
@@ -8,6 +10,7 @@ import * as S from './Register.styled';
 
 const Register = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { formValues, inputHandler } = useForm({
     email: {
       value: '',
@@ -29,6 +32,7 @@ const Register = () => {
     e.preventDefault();
     (async () => {
       try {
+        dispatch(uiActions.setIsLoading(true));
         await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_API}/register`, {
           email: formValues.email.value,
           phone: formValues.phone.value,
@@ -37,6 +41,8 @@ const Register = () => {
         navigate(PublicRoutes.HOME);
       } catch (e) {
         console.log((e as Error).message);
+      } finally {
+        dispatch(uiActions.setIsLoading(false));
       }
     })();
   };
