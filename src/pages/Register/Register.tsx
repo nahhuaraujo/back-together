@@ -30,9 +30,9 @@ const Register = () => {
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    dispatch(uiActions.setIsLoading(true));
     (async () => {
       try {
-        dispatch(uiActions.setIsLoading(true));
         await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_API}/register`, {
           email: formValues.email.value,
           phone: formValues.phone.value,

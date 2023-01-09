@@ -13,5 +13,5 @@ export const NavLink = styled(Link)<INavLinkProps>`
   transition: 100ms;
 
   ${navLinkDefaultHover};
-  ${navLinkDefaultActive}
+  ${navLinkDefaultActive};
 `;

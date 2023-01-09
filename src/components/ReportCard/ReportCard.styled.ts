@@ -3,7 +3,7 @@ import { darkGreenColorValue, defaultThinBorder } from '../../styles/global-styl
 
 export const ReportCard = styled.section`
   display: flex;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.5rem;
   padding: 1rem;
   min-height: fit-content;
   width: 70%;

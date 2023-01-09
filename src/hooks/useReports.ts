@@ -5,7 +5,7 @@ import { reportActions, uiActions } from '../redux/slices';
 import { IAppStore } from '../redux/store';
 
 export const useReports = () => {
-  const { list } = useSelector((store: IAppStore) => store.report);
+  const { list: reports } = useSelector((store: IAppStore) => store.report);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,5 +28,5 @@ export const useReports = () => {
     };
   }, [dispatch]);
 
-  return { list };
+  return { reports };
 };
