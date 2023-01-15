@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Button, Checkbox, Input, InputFile, Select } from '../../components';
 import { useForm } from '../../hooks';
-import { IReport } from '../../models';
 import { uiActions } from '../../redux/slices';
 import { IAppStore } from '../../redux/store';
 import { PublicRoutes } from '../../routes';
@@ -40,7 +39,7 @@ const CreateReport = () => {
       isValid: false,
     },
     img: {
-      value: '',
+      value: undefined,
       isValid: false,
     },
     location: {
@@ -65,24 +64,25 @@ const CreateReport = () => {
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const newReport: Partial<IReport> = {
-      pet: {
-        name: formValues.name.value,
-        species: formValues.species.value,
-        breed: formValues.breed.value,
-        sex: formValues.sex.value,
-        description: formValues.description.value,
-        img: formValues.img.value,
-      },
-      user: { _id, email, phone },
-      type: formValues.type.value,
-      location: formValues.location.value,
-      reward: formValues.reward.value,
-    };
+
+    const formData = new FormData();
+    formData.append('name', formValues.name.value);
+    formData.append('species', formValues.species.value);
+    formData.append('breed', formValues.breed.value);
+    formData.append('sex', formValues.sex.value);
+    formData.append('description', formValues.description.value);
+    formData.append('img', formValues.img.value as File);
+    formData.append('_id', _id);
+    formData.append('email', email);
+    formData.append('phone', phone);
+    formData.append('type', formValues.type.value);
+    formData.append('location', formValues.location.value);
+    formData.append('reward', formValues.reward.value);
+
     (async () => {
       try {
         dispatch(uiActions.setIsLoading(true));
-        await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_API}/report`, newReport);
+        await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_URL}/report`, formData);
         navigate(PublicRoutes.HOME);
       } catch (e) {
         console.log((e as Error).message);
@@ -95,7 +95,7 @@ const CreateReport = () => {
   return (
     <S.CreateReport>
       <S.FormContainer>
-        <S.ReportForm onSubmit={submitHandler}>
+        <S.ReportForm onSubmit={submitHandler} encType='multipart/form-data'>
           <Select
             id='type'
             label='Seleccione tipo de reporte'
@@ -164,7 +164,9 @@ const CreateReport = () => {
           />
           <InputFile
             id='img'
+            name='img'
             label='Seleccione una imagen'
+            value={formValues.img}
             onChange={selectFileHandler}
             validators={[VALIDATOR_REQUIRE()]}
           />

@@ -1,9 +1,10 @@
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { uiActions } from '../../redux/slices';
+import { useNavigate } from 'react-router-dom';
 import { Button, Input } from '../../components';
 import { useForm } from '../../hooks';
+import { IUser } from '../../models';
+import { uiActions } from '../../redux/slices';
 import { PublicRoutes } from '../../routes';
 import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH } from '../../utils/validators.util';
 import * as S from './Register.styled';
@@ -30,15 +31,16 @@ const Register = () => {
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(uiActions.setIsLoading(true));
+    const newUser: Partial<IUser> = {
+      email: formValues.email.value,
+      phone: formValues.phone.value,
+      password: formValues.password.value,
+    };
     (async () => {
       try {
-        await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_API}/register`, {
-          email: formValues.email.value,
-          phone: formValues.phone.value,
-          password: formValues.password.value,
-        });
-        navigate(PublicRoutes.HOME);
+        dispatch(uiActions.setIsLoading(true));
+        await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_URL}/register`, newUser);
+        navigate(PublicRoutes.LOGIN);
       } catch (e) {
         console.log((e as Error).message);
       } finally {

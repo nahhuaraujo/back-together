@@ -10,5 +10,7 @@ export * from './LogoutButton';
 export * from './MenuDrawer';
 export * from './NavLink';
 export * from './ReportCard';
+export * from './ReportDetails';
+export * from './ReportTitle';
 export * from './Select';
 export * from './Spinner';

@@ -13,7 +13,7 @@ export const useReports = () => {
     (async () => {
       try {
         dispatch(uiActions.setIsLoading(true));
-        const response = await axios.get(`${process.env.REACT_APP_BACK_TOGETHER_API}/report/find-all`, {
+        const response = await axios.get(`${process.env.REACT_APP_BACK_TOGETHER_URL}/report/find-all`, {
           signal: controller.signal,
         });
         dispatch(reportActions.setReports(response.data.payload));

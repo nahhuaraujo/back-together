@@ -49,3 +49,10 @@ export const navLinkDefaultActive = css`
     color: white;
   }
 `;
+
+export const defaultShadowHover = css`
+  :hover {
+    box-shadow: 10px 10px ${darkGreenColorValue};
+    transform: scale(1.03);
+  }
+`;

@@ -1,50 +1,35 @@
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { IReport } from '../../models';
+import { IAppStore } from '../../redux/store';
+import { PrivateRoutes } from '../../routes';
 import * as S from './ReportCard.styled';
+import { ReportTitle } from '../../components';
 
 interface IProps {
   report: IReport;
 }
 
 const ReportCard = ({ report }: IProps) => {
-  return (
-    <S.ReportCard>
-      <S.ReportImage src={report.pet.img} />
-      <S.ReportDescription>
-        <h2>
-          <p>
-            {report.pet.name}
-            {report.type === 'lost' && report.pet.sex === 'male' && ' esta perdido'}
-            {report.type === 'lost' && report.pet.sex === 'female' && ' esta perdida'}
-          </p>
-          <p>
-            {report.type === 'found' &&
-              report.pet.sex === 'male' &&
-              report.pet.species === 'dog' &&
-              `Perro macho encontrado`}
-          </p>
-          <p>
-            {report.type === 'found' &&
-              report.pet.sex === 'female' &&
-              report.pet.species === 'dog' &&
-              `Perra hembra encontrada`}
-          </p>
+  const { token } = useSelector((store: IAppStore) => store.user);
+  const navigate = useNavigate();
 
-          <p>
-            {report.type === 'found' &&
-              report.pet.sex === 'male' &&
-              report.pet.species === 'cat' &&
-              `Gato macho encontrado`}
-          </p>
-          <p>
-            {report.type === 'found' &&
-              report.pet.sex === 'female' &&
-              report.pet.species === 'cat' &&
-              `Gata hembra encontrada`}
-          </p>
-        </h2>
+  const seeFullReport = () => {
+    navigate(`${PrivateRoutes.REPORT}/${report._id}`);
+  };
+
+  const showMessage = () => {
+    console.log('Para ver el reporte completo debe iniciar sesion');
+  };
+
+  return (
+    <S.ReportCard onClick={!!token ? seeFullReport : showMessage}>
+      <S.ReportImage src={`${process.env.REACT_APP_BACK_TOGETHER_URL}/img/pets/${report.pet.img}`} />
+      <S.ReportDescription>
+        <ReportTitle report={report} />
         <div>
-          <p>Zona: {report.location}</p>
           <p>Descripcion: {report.pet.description}</p>
+          <p>Zona: {report.location}</p>
           {report.reward ? <S.ReportReward>Se ofrece recompensa</S.ReportReward> : null}
         </div>
       </S.ReportDescription>

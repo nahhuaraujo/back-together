@@ -1,10 +1,7 @@
-import { useSelector } from 'react-redux';
 import { NavLink } from '../';
-import { IAppStore } from '../../redux/store';
 import * as S from './BTLogo.styled';
 
 const BTLogo = () => {
-  const { filter } = useSelector((store: IAppStore) => store.report);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -13,9 +10,7 @@ const BTLogo = () => {
   };
   return (
     <S.BTLogo onClick={scrollToTop}>
-      <NavLink to='/' filter={filter}>
-        Back Together
-      </NavLink>
+      <NavLink to='/'>Back Together</NavLink>
     </S.BTLogo>
   );
 };

@@ -8,4 +8,5 @@ export enum PublicRoutes {
 export enum PrivateRoutes {
   CREATE_REPORT = '/create-report',
   UPDATE_REPORT = '/update-report',
+  REPORT = '/report',
 }

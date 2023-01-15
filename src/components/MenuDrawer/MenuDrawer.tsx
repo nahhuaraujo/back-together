@@ -9,7 +9,7 @@ const MenuDrawer = () => {
   const { ui, user } = useSelector((store: IAppStore) => store);
   const dispatch = useDispatch();
 
-  const clickHandler = () => {
+  const closeDrawer = () => {
     dispatch(uiActions.closeDrawer());
   };
 
@@ -18,21 +18,11 @@ const MenuDrawer = () => {
       <S.MenuDrawer isOpen={ui.isDrawerOpen}>
         <ul>
           <li>
-            <button onClick={clickHandler}>X</button>
+            <button onClick={closeDrawer}>X</button>
           </li>
           <li>{user.token ? <LogoutButton /> : <NavLink to={PublicRoutes.LOGIN}>Iniciar sesion</NavLink>}</li>
           <li>
-            <NavLink to={PublicRoutes.HOME}>Todos</NavLink>
-          </li>
-          <li>
-            <NavLink to={PublicRoutes.HOME} filter='lost'>
-              Perdidos
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={PublicRoutes.HOME} filter='found'>
-              Encontrados
-            </NavLink>
+            <NavLink to={PublicRoutes.HOME}>Reportes</NavLink>
           </li>
           <li>
             <NavLink to={PublicRoutes.ABOUT_US}>Sobre nosotros</NavLink>
@@ -43,7 +33,7 @@ const MenuDrawer = () => {
           </li>
         </ul>
       </S.MenuDrawer>
-      <S.DropBack onClick={clickHandler} isOpen={ui.isDrawerOpen} />
+      <S.DropBack onClick={closeDrawer} isOpen={ui.isDrawerOpen} />
     </>
   );
 };

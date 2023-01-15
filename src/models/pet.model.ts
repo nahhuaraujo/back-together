@@ -4,5 +4,5 @@ export interface IPet {
   breed: string;
   sex: 'male' | 'female';
   description: string;
-  img: string;
+  img: string | File;
 }
