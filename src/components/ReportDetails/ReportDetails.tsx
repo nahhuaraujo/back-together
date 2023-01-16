@@ -15,6 +15,7 @@ const ReportDetails = ({ report }: IProps) => {
             <ReportTitle report={report} />
             <div>
               <S.ReportSubtitle>Descripción</S.ReportSubtitle>
+              <p>{report.pet.description}</p>
               <p>Especie: {report.pet.species === 'cat' ? 'Gato' : 'Perro'}</p>
               <p>Raza: {report.pet.breed}</p>
               <p>Sexo: {report.pet.sex === 'male' ? 'Macho' : 'Hembra'}</p>

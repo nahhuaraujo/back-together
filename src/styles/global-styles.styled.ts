@@ -57,14 +57,18 @@ export const defaultShadowHover = css`
   }
 `;
 
+export const defaultTitleUnderlineStyle = css`
+  background-image: linear-gradient(transparent 60%, ${lightestGreenColorValue} 40%);
+`;
+
 export const titleStyle = css`
   font-size: 2rem;
   margin-top: 1rem;
-  text-decoration: underline ${lightestGreenColorValue} solid 5px;
+  ${defaultTitleUnderlineStyle};
 `;
 
 export const subtitleStyle = css`
   font-size: 1.5rem;
   margin-top: 2rem;
-  text-decoration: underline ${lightestGreenColorValue} solid 5px;
+  ${defaultTitleUnderlineStyle};
 `;
