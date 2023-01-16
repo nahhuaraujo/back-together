@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import * as S from './App.styled';
-import { Header, Spinner } from './components';
+import { Footer, Header, Spinner } from './components';
 import { AuthGuard } from './guards';
 import { About, CreateReport, Home, Login, NotFound, Register, Report } from './pages';
 import store from './redux/store';
@@ -25,6 +25,7 @@ const App = () => {
             </Route>
             <Route path='*' element={<NotFound />} />
           </Routes>
+          <Footer />
         </Router>
       </Provider>
     </S.App>

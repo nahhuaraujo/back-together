@@ -14,17 +14,17 @@ const ReportDetails = ({ report }: IProps) => {
           <S.ReportData>
             <ReportTitle report={report} />
             <div>
-              <p>Descripcion</p>
+              <S.ReportSubtitle>Descripción</S.ReportSubtitle>
               <p>Especie: {report.pet.species === 'cat' ? 'Gato' : 'Perro'}</p>
               <p>Raza: {report.pet.breed}</p>
               <p>Sexo: {report.pet.sex === 'male' ? 'Macho' : 'Hembra'}</p>
               <p>Zona: {report.location}</p>
             </div>
             <div>
-              <p>Contacto</p>
+              <S.ReportSubtitle>Contacto</S.ReportSubtitle>
               <p>Telefono: {report.user.phone}</p>
               <p>Email: {report.user.email}</p>
-              {report.reward ? <p>Se ofrece recompensa</p> : null}
+              {report.reward ? <S.ReportReward>Se ofrece recompensa</S.ReportReward> : null}
             </div>
           </S.ReportData>
         </>

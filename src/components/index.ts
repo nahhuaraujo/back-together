@@ -3,6 +3,7 @@ export * from './Burguer';
 export * from './Button';
 export * from './Checkbox';
 export * from './CreateReportButton';
+export * from './Footer';
 export * from './Header';
 export * from './Input';
 export * from './InputFile';

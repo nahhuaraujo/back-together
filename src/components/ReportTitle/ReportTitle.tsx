@@ -8,8 +8,8 @@ const ReportTitle = ({ report }: IProps) => {
   return (
     <S.ReportTitle>
       {report.pet.name}
-      {report.type === 'lost' && report.pet.sex === 'male' && ' esta perdido'}
-      {report.type === 'lost' && report.pet.sex === 'female' && ' esta perdida'}
+      {report.type === 'lost' && report.pet.sex === 'male' && ' está perdido'}
+      {report.type === 'lost' && report.pet.sex === 'female' && ' está perdida'}
       {report.type === 'found' && report.pet.sex === 'male' && report.pet.species === 'dog' && `Perro macho encontrado`}
       {report.type === 'found' &&
         report.pet.sex === 'female' &&
