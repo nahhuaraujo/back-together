@@ -10,7 +10,7 @@ const ReportDetails = ({ report }: IProps) => {
     <S.ReportDetails>
       {report !== undefined ? (
         <>
-          <S.ReportImg src={report.pet.img as string} />
+          <S.ReportImg src={`${process.env.REACT_APP_BACK_TOGETHER_URL}/img/pets/${report.pet.img}`} />
           <S.ReportData>
             <ReportTitle report={report} />
             <div>
