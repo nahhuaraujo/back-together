@@ -39,7 +39,7 @@ const Register = () => {
     (async () => {
       try {
         dispatch(uiActions.setIsLoading(true));
-        await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_URL}/register`, newUser);
+        await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_URL}/auth/register`, newUser);
         navigate(PublicRoutes.LOGIN);
       } catch (e) {
         console.log((e as Error).message);

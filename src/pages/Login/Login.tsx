@@ -29,7 +29,7 @@ const Login = () => {
     (async () => {
       try {
         dispatch(uiActions.setIsLoading(true));
-        const response = await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_URL}/login`, {
+        const response = await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_URL}/auth/login`, {
           email: formValues.email.value,
           password: formValues.password.value,
         });

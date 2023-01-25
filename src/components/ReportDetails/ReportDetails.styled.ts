@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { darkGreyColorValue, defaultThinBorder, subtitleStyle } from '../../styles/global-styles.styled';
 
 export const ReportDetails = styled.div`
+  height: 90vh;
   max-width: fit-content;
   padding: 1rem;
   margin: 0 auto;
@@ -10,7 +11,7 @@ export const ReportDetails = styled.div`
   gap: 2rem;
 
   @media (max-width: 850px) {
-    width: 80vw;
+    width: 80%;
     flex-direction: column;
     min-width: fit-content;
   }

@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { uiActions, userActions } from '../../redux/slices';
+import { uiActions, userActions, reportActions } from '../../redux/slices';
 import { PublicRoutes } from '../../routes';
 import * as S from './LogoutButton.styled';
 
@@ -9,6 +9,7 @@ const LogoutButton = () => {
   const navigate = useNavigate();
 
   const clickHandler = () => {
+    dispatch(reportActions.clearReports());
     dispatch(userActions.clearUserData());
     dispatch(uiActions.closeDrawer());
     navigate(PublicRoutes.LOGIN);
