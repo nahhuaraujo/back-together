@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { darkGreyColorValue, defaultThinBorder, subtitleStyle } from '../../styles/global-styles.styled';
 
 export const ReportDetails = styled.div`
-  height: 90vh;
+  height: 80vh;
   max-width: fit-content;
   padding: 1rem;
   margin: 0 auto;
