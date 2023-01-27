@@ -2,13 +2,18 @@ import styled from 'styled-components';
 import { darkGreyColorValue, defaultThinBorder, subtitleStyle } from '../../styles/global-styles.styled';
 
 export const ReportDetails = styled.div`
-  height: 80vh;
+  width: 80%;
   max-width: fit-content;
   padding: 1rem;
   margin: 0 auto;
   background-color: white;
-  display: flex;
   gap: 2rem;
+
+  > div {
+    display: flex;
+    gap: 1rem;
+    flex-basis: 0;
+  }
 
   @media (max-width: 850px) {
     width: 80%;
@@ -18,6 +23,8 @@ export const ReportDetails = styled.div`
 `;
 
 export const ReportImg = styled.img`
+  width: 100%;
+  height: 70vh;
   object-fit: cover;
   background-color: ${darkGreyColorValue};
   ${defaultThinBorder};
@@ -30,7 +37,6 @@ export const ReportImg = styled.img`
 
 export const ReportData = styled.section`
   width: 100%;
-  padding: 0 1rem 2rem 0;
   div {
     p {
       margin: 1rem 0 0 1rem;
