@@ -29,14 +29,10 @@ const Login = () => {
     (async () => {
       try {
         dispatch(uiActions.setIsLoading(true));
-        const response = await axios.post(
-          `${process.env.REACT_APP_BACK_TOGETHER_URL}/auth/login`,
-          {
-            email: formValues.email.value,
-            password: formValues.password.value,
-          },
-          { headers: { 'Access-Control-Allow-Origin': 'https://back-together.netlify.app' } }
-        );
+        const response = await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_URL}/auth/login`, {
+          email: formValues.email.value,
+          password: formValues.password.value,
+        });
         dispatch(
           userActions.setUserData({
             _id: response.data.payload._id,
