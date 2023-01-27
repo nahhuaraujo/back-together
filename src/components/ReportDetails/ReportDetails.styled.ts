@@ -2,45 +2,44 @@ import styled from 'styled-components';
 import { darkGreyColorValue, defaultThinBorder, subtitleStyle } from '../../styles/global-styles.styled';
 
 export const ReportDetails = styled.div`
-  width: 80%;
   max-width: fit-content;
   padding: 1rem;
   margin: 0 auto;
   background-color: white;
-  gap: 2rem;
 
-  > div {
-    display: flex;
-    gap: 1rem;
-    flex-basis: 0;
-  }
+  display: flex;
+  gap: 1rem;
 
   @media (max-width: 850px) {
-    width: 80%;
     flex-direction: column;
     min-width: fit-content;
   }
 `;
 
-export const ReportImg = styled.img`
-  width: 100%;
-  height: 70vh;
-  object-fit: cover;
-  background-color: ${darkGreyColorValue};
-  ${defaultThinBorder};
-
+export const ReportImgContainer = styled.div`
+  width: 50%;
   @media (max-width: 850px) {
-    width: 80vw;
-    flex-direction: column;
+    width: 100%;
   }
 `;
 
-export const ReportData = styled.section`
+export const ReportImg = styled.img`
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: ${darkGreyColorValue};
+  ${defaultThinBorder};
+`;
+
+export const ReportData = styled.section`
+  width: 50%;
   div {
     p {
       margin: 1rem 0 0 1rem;
     }
+  }
+  @media (max-width: 850px) {
+    width: 100%;
   }
 `;
 

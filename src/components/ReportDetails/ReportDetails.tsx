@@ -10,28 +10,26 @@ const ReportDetails = ({ report }: IProps) => {
     <S.ReportDetails>
       {report !== undefined ? (
         <>
-          <div>
+          <S.ReportImgContainer>
+            <S.ReportImg src={`${process.env.REACT_APP_BACK_TOGETHER_URL}/img/pets/${report.pet.img}`} />
+          </S.ReportImgContainer>
+          <S.ReportData>
+            <ReportTitle report={report} />
             <div>
-              <S.ReportImg src={`${process.env.REACT_APP_BACK_TOGETHER_URL}/img/pets/${report.pet.img}`} />
+              <S.ReportSubtitle>Descripción</S.ReportSubtitle>
+              <p>{report.pet.description}</p>
+              <p>Especie: {report.pet.species === 'cat' ? 'Gato' : 'Perro'}</p>
+              <p>Raza: {report.pet.breed}</p>
+              <p>Sexo: {report.pet.sex === 'male' ? 'Macho' : 'Hembra'}</p>
+              <p>Zona: {report.location}</p>
             </div>
-            <S.ReportData>
-              <ReportTitle report={report} />
-              <div>
-                <S.ReportSubtitle>Descripción</S.ReportSubtitle>
-                <p>{report.pet.description}</p>
-                <p>Especie: {report.pet.species === 'cat' ? 'Gato' : 'Perro'}</p>
-                <p>Raza: {report.pet.breed}</p>
-                <p>Sexo: {report.pet.sex === 'male' ? 'Macho' : 'Hembra'}</p>
-                <p>Zona: {report.location}</p>
-              </div>
-              <div>
-                <S.ReportSubtitle>Contacto</S.ReportSubtitle>
-                <p>Telefono: {report.user.phone}</p>
-                <p>Email: {report.user.email}</p>
-                {report.reward ? <S.ReportReward>Se ofrece recompensa</S.ReportReward> : null}
-              </div>
-            </S.ReportData>
-          </div>
+            <div>
+              <S.ReportSubtitle>Contacto</S.ReportSubtitle>
+              <p>Telefono: {report.user.phone}</p>
+              <p>Email: {report.user.email}</p>
+              {report.reward ? <S.ReportReward>Se ofrece recompensa</S.ReportReward> : null}
+            </div>
+          </S.ReportData>
         </>
       ) : (
         <div>El reporte no fue encontrado</div>
