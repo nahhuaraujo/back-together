@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Burguer = styled.div`
-  margin-left: 2rem;
+  margin-top: 0.5rem;
   position: relative;
   cursor: pointer;
 
