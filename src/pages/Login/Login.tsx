@@ -43,7 +43,7 @@ const Login = () => {
             token: response.data.payload.token,
           })
         );
-        setError(response.data.payload);
+        setError(response.data.payload.email);
         // navigate(PublicRoutes.HOME);
       } catch (e) {
         console.log((e as Error).message);
