@@ -82,7 +82,7 @@ const CreateReport = () => {
     (async () => {
       try {
         dispatch(uiActions.setIsLoading(true));
-        await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_URL}/report`, formData);
+        await axios.post(`${process.env.REACT_APP_BACK_TOGETHER_URL}/reports`, formData);
         navigate(PublicRoutes.HOME);
       } catch (e) {
         console.log((e as Error).message);
