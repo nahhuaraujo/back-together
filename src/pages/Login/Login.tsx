@@ -43,10 +43,9 @@ const Login = () => {
             token: response.data.payload.token,
           })
         );
-        setError('Error después del dispatch');
+        setError(response.data.payload);
         // navigate(PublicRoutes.HOME);
       } catch (e) {
-        setError('Error en el catch');
         console.log((e as Error).message);
       } finally {
         dispatch(uiActions.setIsLoading(false));
