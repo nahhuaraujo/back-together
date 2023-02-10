@@ -1,4 +1,4 @@
-import { IReport } from '../../models';
+import { IReport } from '../../../../../../models';
 import * as S from './ReportTitle.styled';
 
 interface IProps {

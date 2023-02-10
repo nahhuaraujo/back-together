@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { IReport } from '../../models';
-import { IAppStore } from '../../redux/store';
-import { PrivateRoutes } from '../../routes';
+import { IReport } from '../../../../models';
+import { IAppStore } from '../../../../redux/store';
+import { PrivateRoutes } from '../../../../routes';
+import { ReportTitle } from './components';
 import * as S from './ReportCard.styled';
-import { ReportTitle } from '../../components';
 
 interface IProps {
   report: IReport;

@@ -1,5 +1,5 @@
-import { NavLink } from '..';
-import { PrivateRoutes } from '../../routes';
+import { NavLink } from '../../../../components';
+import { PrivateRoutes } from '../../../../routes';
 import * as S from './CreateReportButton.styled';
 
 const CreateReportButton = () => {

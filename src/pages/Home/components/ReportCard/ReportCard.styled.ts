@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darkGreyColorValue, defaultShadowHover, defaultThinBorder } from '../../styles/global-styles.styled';
+import { darkGreyColorValue, defaultShadowHover, defaultThinBorder } from '../../../../styles/global-styles.styled';
 
 export const ReportCard = styled.section`
   margin: 0 auto 1.5rem;

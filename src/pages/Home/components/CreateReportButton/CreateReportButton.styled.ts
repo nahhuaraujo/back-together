@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darkGreenColorValue, defaultPaddingStyle } from '../../styles/global-styles.styled';
+import { darkGreenColorValue, defaultPaddingStyle } from '../../../../styles/global-styles.styled';
 
 export const CreateReportButton = styled.div`
   display: flex;

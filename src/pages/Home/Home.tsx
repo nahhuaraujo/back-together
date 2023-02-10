@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
-import { CreateReportButton, ReportCard } from '../../components';
 import { useReports } from '../../hooks';
 import { IAppStore } from '../../redux/store';
+import { CreateReportButton, ReportCard } from './components';
 import * as S from './Home.styled';
 
 const Home = () => {
