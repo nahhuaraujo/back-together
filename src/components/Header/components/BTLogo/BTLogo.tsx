@@ -1,4 +1,4 @@
-import { NavLink } from '../';
+import { NavLink } from '../../../../components';
 import * as S from './BTLogo.styled';
 
 const BTLogo = () => {

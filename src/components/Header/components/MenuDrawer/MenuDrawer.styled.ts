@@ -4,15 +4,15 @@ import {
   navLinkDefaultActive,
   navLinkDefaultHover,
   unstyledButton,
-} from '../../styles/global-styles.styled';
+} from '../../../../styles/global-styles.styled';
 
 interface IMenuDrawerProps {
   isOpen: boolean;
 }
 export const MenuDrawer = styled.nav<IMenuDrawerProps>`
   padding: 1rem;
-  text-align: right;
-  width: 50vw;
+  text-align: left;
+  width: max-content;
   height: 100vh;
   background-color: ${lightGreenColorValue};
   position: fixed;
@@ -20,10 +20,6 @@ export const MenuDrawer = styled.nav<IMenuDrawerProps>`
   right: ${({ isOpen }) => (isOpen ? 0 : '-200%')};
   z-index: 1;
   transition: 300ms;
-
-  @media (max-width: 600px) {
-    width: 80vw;
-  }
 
   ul {
     height: 100%;

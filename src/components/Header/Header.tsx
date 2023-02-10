@@ -1,4 +1,4 @@
-import { BTLogo, Burguer, MenuDrawer } from '../';
+import { BTLogo, Burguer, MenuDrawer } from './components';
 import * as S from './Header.styled';
 
 const Header = () => {

@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { LogoutButton, NavLink } from '../';
-import { uiActions } from '../../redux/slices';
-import { IAppStore } from '../../redux/store';
-import { PrivateRoutes, PublicRoutes } from '../../routes';
+import { LogoutButton, NavLink } from '../../..';
+import { uiActions } from '../../../../redux/slices';
+import { IAppStore } from '../../../../redux/store';
+import { PrivateRoutes, PublicRoutes } from '../../../../routes';
 import * as S from './MenuDrawer.styled';
 
 const MenuDrawer = () => {
@@ -28,8 +28,7 @@ const MenuDrawer = () => {
             <NavLink to={PublicRoutes.ABOUT_US}>Sobre nosotros</NavLink>
           </li>
           <li>
-            <div>Encontraste o perdiste una mascota?</div>
-            <NavLink to={PrivateRoutes.CREATE_REPORT}>Reportala aca</NavLink>
+            <NavLink to={PrivateRoutes.CREATE_REPORT}>Crea tu reporte</NavLink>
           </li>
         </ul>
       </S.MenuDrawer>

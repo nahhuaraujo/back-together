@@ -1,5 +1,5 @@
-export * from './BTLogo';
-export * from './Burguer';
+export * from './Header/components/BTLogo';
+export * from './Header/components/Burguer';
 export * from './Button';
 export * from './Checkbox';
 export * from '../pages/Home/components/CreateReportButton';
@@ -8,7 +8,7 @@ export * from './Header';
 export * from './Input';
 export * from './InputFile';
 export * from './LogoutButton';
-export * from './MenuDrawer';
+export * from './Header/components/MenuDrawer';
 export * from './NavLink';
 export * from '../pages/Home/components/ReportCard';
 export * from './ReportDetails';

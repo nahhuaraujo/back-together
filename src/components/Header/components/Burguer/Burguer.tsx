@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { uiActions } from '../../redux/slices';
+import { uiActions } from '../../../../redux/slices';
 import * as S from './Burguer.styled';
 
 const Burguer = () => {
