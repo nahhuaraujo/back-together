@@ -1,16 +1,14 @@
 import axios from 'axios';
-import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button, Input, NavLink } from '../../components';
 import { useForm } from '../../hooks';
 import { userActions, uiActions } from '../../redux/slices';
-// import { PublicRoutes } from '../../routes';
+import { PublicRoutes } from '../../routes';
 import { VALIDATOR_EMAIL, VALIDATOR_MINLENGTH } from '../../utils/validators.util';
 import * as S from './Login.styled';
 
 const Login = () => {
-  const [error, setError] = useState('');
   const { formValues, inputHandler } = useForm({
     email: {
       value: '',
@@ -21,7 +19,7 @@ const Login = () => {
       isValid: false,
     },
   });
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const isDisabled = !formValues.email.isValid || !formValues.password.isValid;
@@ -43,8 +41,7 @@ const Login = () => {
             token: response.data.payload.token,
           })
         );
-        setError(response.data.payload.email);
-        // navigate(PublicRoutes.HOME);
+        navigate(PublicRoutes.HOME);
       } catch (e) {
         console.log((e as Error).message);
       } finally {
@@ -77,7 +74,6 @@ const Login = () => {
           <NavLink to='/register'>Registrate aca</NavLink>
         </S.LoginForm>
       </S.FormContainer>
-      <h1 style={{ textAlign: 'center', paddingTop: '1rem' }}>{error}</h1>
     </S.Login>
   );
 };
