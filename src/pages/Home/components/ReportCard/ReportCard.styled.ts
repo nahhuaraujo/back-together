@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-import { darkGreyColorValue, defaultShadowHover, defaultThinBorder } from '../../../../styles/global-styles.styled';
+import {
+  defaultShadowHoverStyle,
+  defaultThinBorderStyle,
+  grey_200_value,
+} from '../../../../styles/global-styles.styled';
 
 export const ReportCard = styled.section`
   margin: 0 auto 1.5rem;
@@ -11,16 +15,16 @@ export const ReportCard = styled.section`
   z-index: 999;
   cursor: pointer;
 
-  ${defaultShadowHover};
+  ${defaultShadowHoverStyle};
 `;
 
 export const ReportImage = styled.img`
   width: 100%;
   min-height: 500px;
-  ${defaultThinBorder};
+  ${defaultThinBorderStyle};
   object-fit: cover;
   margin: 0;
-  background-color: ${darkGreyColorValue};
+  background-color: ${grey_200_value};
   display: block;
 `;
 

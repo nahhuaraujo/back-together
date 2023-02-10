@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import GridLoader from 'react-spinners/GridLoader';
 import { IAppStore } from '../../redux/store';
-import { darkGreenColorValue } from '../../styles/global-styles.styled';
+import { green_300_value } from '../../styles/global-styles.styled';
 import * as S from './Spinner.styled';
 
 const Spinner = () => {
@@ -10,7 +10,7 @@ const Spinner = () => {
     <>
       {isLoading && (
         <S.SpinnerOverlay>
-          <GridLoader color={darkGreenColorValue} />
+          <GridLoader color={green_300_value} />
         </S.SpinnerOverlay>
       )}
     </>

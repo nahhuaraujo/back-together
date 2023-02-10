@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import {
-  lightGreenColorValue,
-  navLinkDefaultActive,
-  navLinkDefaultHover,
-  unstyledButton,
+  green_200_value,
+  navLinkDefaultActiveStyle,
+  navLinkDefaultHoverStyle,
+  unstyledButtonStyle,
 } from '../../../../styles/global-styles.styled';
 
 interface IMenuDrawerProps {
@@ -14,7 +14,7 @@ export const MenuDrawer = styled.nav<IMenuDrawerProps>`
   text-align: left;
   width: max-content;
   height: 100vh;
-  background-color: ${lightGreenColorValue};
+  background-color: ${green_200_value};
   position: fixed;
   top: 0;
   right: ${({ isOpen }) => (isOpen ? 0 : '-200%')};
@@ -31,9 +31,9 @@ export const MenuDrawer = styled.nav<IMenuDrawerProps>`
       button {
         padding: 1rem;
         cursor: pointer;
-        ${unstyledButton};
-        ${navLinkDefaultHover};
-        ${navLinkDefaultActive};
+        ${unstyledButtonStyle};
+        ${navLinkDefaultHoverStyle};
+        ${navLinkDefaultActiveStyle};
       }
     }
 

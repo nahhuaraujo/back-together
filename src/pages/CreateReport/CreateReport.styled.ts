@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { defaultPageStyle, defaultThinBorder } from '../../styles/global-styles.styled';
+import { defaultPageStyle, defaultThinBorderStyle } from '../../styles/global-styles.styled';
 
 export const CreateReport = styled.main`
   ${defaultPageStyle}
@@ -17,7 +17,7 @@ export const FormContainer = styled.div`
 export const ReportForm = styled.form`
   padding: 1rem;
   height: 100%;
-  ${defaultThinBorder}
+  ${defaultThinBorderStyle}
   display: flex;
   flex-direction: column;
   justify-content: center;

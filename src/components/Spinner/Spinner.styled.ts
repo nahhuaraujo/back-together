@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lightestGreenColorValue } from '../../styles/global-styles.styled';
+import { green_100_value } from '../../styles/global-styles.styled';
 
 export const SpinnerOverlay = styled.div`
   position: fixed;
@@ -7,7 +7,7 @@ export const SpinnerOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: ${lightestGreenColorValue};
+  background-color: ${green_100_value};
   display: grid;
   justify-content: center;
   align-items: center;

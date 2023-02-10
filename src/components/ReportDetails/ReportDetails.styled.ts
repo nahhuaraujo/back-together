@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darkGreyColorValue, defaultThinBorder, subtitleStyle } from '../../styles/global-styles.styled';
+import { defaultThinBorderStyle, grey_200_value, subtitleStyle } from '../../styles/global-styles.styled';
 
 export const ReportDetails = styled.div`
   max-width: fit-content;
@@ -27,8 +27,8 @@ export const ReportImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: ${darkGreyColorValue};
-  ${defaultThinBorder};
+  background-color: ${grey_200_value};
+  ${defaultThinBorderStyle};
 `;
 
 export const ReportData = styled.section`

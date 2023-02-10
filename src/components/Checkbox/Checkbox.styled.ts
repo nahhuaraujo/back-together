@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { defaultPaddingStyle, lightGreenColorValue } from '../../styles/global-styles.styled';
+import { defaultPaddingStyle, green_200_value } from '../../styles/global-styles.styled';
 
 export const Checkbox = styled.div`
   min-width: max-content;
@@ -15,7 +15,7 @@ export const Checkbox = styled.div`
 
   input {
     width: fit-content;
-    border: 1px solid ${lightGreenColorValue};
+    border: 1px solid ${green_200_value};
     ${defaultPaddingStyle};
   }
 `;

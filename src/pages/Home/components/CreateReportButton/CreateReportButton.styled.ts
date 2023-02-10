@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darkGreenColorValue, defaultPaddingStyle } from '../../../../styles/global-styles.styled';
+import { defaultPaddingStyle, green_300_value } from '../../../../styles/global-styles.styled';
 
 export const CreateReportButton = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ export const CreateReportButton = styled.div`
 
     :hover {
       background-color: white;
-      box-shadow: 10px 10px ${darkGreenColorValue};
+      box-shadow: 10px 10px ${green_300_value};
       transform: scale(1.03);
     }
   }

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import {
-  darkGreenColorValue,
-  darkGreyColorValue,
   defaultButtonStyle,
-  lightGreenColorValue,
+  green_200_value,
+  green_300_value,
+  grey_200_value,
 } from '../../styles/global-styles.styled';
 
 interface ILoginButtonProps {
@@ -11,9 +11,9 @@ interface ILoginButtonProps {
 }
 export const Button = styled.button<ILoginButtonProps>`
   ${defaultButtonStyle};
-  background-color: ${({ disabled }) => (disabled ? `${darkGreyColorValue}` : `${lightGreenColorValue}`)};
+  background-color: ${({ disabled }) => (disabled ? `${grey_200_value}` : `${green_200_value}`)};
 
   :active {
-    background-color: ${({ disabled }) => (disabled ? `${darkGreyColorValue}` : `${darkGreenColorValue}`)};
+    background-color: ${({ disabled }) => (disabled ? `${grey_200_value}` : `${green_300_value}`)};
   }
 `;

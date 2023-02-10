@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-import { defaultPaddingStyle, navLinkDefaultActive, navLinkDefaultHover } from '../../styles/global-styles.styled';
+import {
+  defaultPaddingStyle,
+  navLinkDefaultActiveStyle,
+  navLinkDefaultHoverStyle,
+} from '../../styles/global-styles.styled';
 
 export const LogoutButton = styled.button`
   width: fit-content;
@@ -12,6 +16,6 @@ export const LogoutButton = styled.button`
   transition: 100ms;
   cursor: pointer;
 
-  ${navLinkDefaultHover};
-  ${navLinkDefaultActive}
+  ${navLinkDefaultHoverStyle};
+  ${navLinkDefaultActiveStyle}
 `;
