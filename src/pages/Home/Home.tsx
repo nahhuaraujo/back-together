@@ -8,10 +8,12 @@ const Home = () => {
   const { user } = useSelector((store: IAppStore) => store);
   const { reports } = useReports();
 
+  const sortedReports = [...reports].sort((a, b) => b.createdAt - a.createdAt);
+
   return (
     <S.Home>
       {user.token ? <CreateReportButton /> : null}
-      {reports.map(report => (
+      {sortedReports.map(report => (
         <ReportCard key={report._id} report={report} />
       ))}
       {reports.length === 0 && <h2>No se encontraron reportes para mostrar</h2>}

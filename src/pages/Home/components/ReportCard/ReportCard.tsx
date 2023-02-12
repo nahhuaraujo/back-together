@@ -28,6 +28,7 @@ const ReportCard = ({ report }: IProps) => {
       <S.ReportDescription>
         <ReportTitle report={report} />
         <div>
+          <p>Fecha: {new Date(report.createdAt).toLocaleDateString('es-ES')}</p>
           <p>Descripcion: {report.pet.description}</p>
           <p>Zona: {report.location}</p>
           {report.reward ? <S.ReportReward>Se ofrece recompensa</S.ReportReward> : null}
